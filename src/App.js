@@ -7,7 +7,7 @@ import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstr
 
 function App() {
 
-  const url = "https://api.themoviedb.org/3/movie/popular?api_key=2875cfd80d97ce2978ef001dc0550578"
+  const url = "https://api.themoviedb.org/3/movie/popular?api_key=<API-KEY>"
 
   const [movies, setMovie] = useState([])
   const [query, setQuery] = useState('');
@@ -23,7 +23,7 @@ function App() {
     e.preventDefault();
     console.log("Searching");
     try {
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=2875cfd80d97ce2978ef001dc0550578&query=${query}`;
+      const url = `https://api.themoviedb.org/3/search/movie?api_key=<API-KEY>8&query=${query}`;
       const res = await axios.get(url);
       const data = await res.data;
       console.log(data);
